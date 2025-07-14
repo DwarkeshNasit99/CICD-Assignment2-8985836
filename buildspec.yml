@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
   install:
     commands:
@@ -6,9 +7,10 @@ phases:
       - npm install
   build:
     commands:
+      - rm -rf cdk.out
       - npx cdk synth
+      - ls -lR cdk.out
 artifacts:
   base-directory: cdk.out
   files:
-    - MyCdkProjectStack.template.json
     - '**/*'
