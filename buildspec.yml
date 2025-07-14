@@ -7,7 +7,6 @@ phases:
   build:
     commands:
       - npx cdk synth
-      - ls -l cdk.out
 artifacts:
   base-directory: cdk.out
   files:
