@@ -9,5 +9,7 @@ phases:
       - npx cdk synth
       - npx cdk deploy --require-approval never
 artifacts:
+  base-directory: cdk.out
   files:
+    - MyCdkProjectStack.template.json
     - '**/*' 
